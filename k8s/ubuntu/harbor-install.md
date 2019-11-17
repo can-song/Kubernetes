@@ -35,7 +35,8 @@ cd harbar && vim harbor.yml
 其他的信息自行配置
 ### 安装
 ```shell
-.prepare && ./install.sh
+# ./.prepare 
+./install.sh
 ```
 
 ## 参考文档
