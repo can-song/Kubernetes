@@ -35,7 +35,7 @@ apt install -y kubectl kubelet kubeadm
 kubeadm init \
 --image-repository registry.aliyuncs.com/google_containers \
 --pod-network-cidr=10.244.0.0/16 \
->k8s-install.log
+>kubeadm-init.log
 ```
 日志文件中有以下两条信息会用到
 
@@ -72,7 +72,7 @@ kubectl apply -f kube-flannel.yml
 ```
 安装失败可执行如下命令删除，然后到官网装最新的安装配置文件：[地址](https://github.com/coreos/flannel)
 ```shell
-kubectl apply -f kube-flannel.yml
+kubectl delete -f kube-flannel.yml
 ```
 ## 参考文档
 https://www.jianshu.com/p/f2d4dd4d1fb1
